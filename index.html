@@ -18,6 +18,8 @@
       align-items: center;
     "
   >
+    <h3>Ingrese su key</h3>
+    <input type="text" id="key" placeholder="key..." />
     <h1 style="width: 100%; text-align: center; margin-top: 40px">
       GPT para Julio
     </h1>
@@ -41,8 +43,7 @@
         respuestaDiv.innerText = "";
 
         try {
-          const apiKey =
-            "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"; // Replace with your OpenAI API key
+          const apiKey = document.getElementById("key").value;
           const question = preguntaInput.value;
 
           const response = await fetch(
